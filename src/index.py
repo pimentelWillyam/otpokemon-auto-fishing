@@ -1,4 +1,4 @@
-import models.PescadorModel
-Pescador = models.PescadorModel.Pescador
+import models.PescadorAutomaticoModel
+PescadorAutomatico = models.PescadorAutomaticoModel.PescadorAutomatico
 
-Pescador.inicia()
+PescadorAutomatico.inicia()
