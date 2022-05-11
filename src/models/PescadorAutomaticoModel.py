@@ -16,7 +16,6 @@ class PescadorAutomatico:
     def inicia():
         while keyboard.is_pressed('space') == False:
             PescadorAutomatico.pesca()
-            sleep(1)
             PescadorAutomatico.SelecionaPokemon()
             PescadorAutomatico.ataca()
             #PescadorAutomatico.SelecionaPokemon()
@@ -35,9 +34,9 @@ class PescadorAutomatico:
         if (PescadorAutomatico.buscaVara() == None):
             print("erro na hora de achar a vara")
             return
-        mouse.move(PescadorAutomatico.posicaoVara[0],PescadorAutomatico.posicaoVara[1], duration=1)
+        mouse.move(PescadorAutomatico.posicaoVara[0],PescadorAutomatico.posicaoVara[1], duration=0.1)
         mouse.click()
-        mouse.move(PescadorAutomatico.posicaoMar[0],PescadorAutomatico.posicaoMar[1], duration=1)
+        mouse.move(PescadorAutomatico.posicaoMar[0],PescadorAutomatico.posicaoMar[1], duration=0.1)
         mouse.click()
         print("anzol no mar, aguardando peixe fisgar.")
         PescadorAutomatico.posicaoPeixeVerde = PescadorAutomatico.buscaPeixeVerde()
@@ -47,7 +46,7 @@ class PescadorAutomatico:
                 sleep(0.1)
                 PescadorAutomatico.posicaoPeixeVerde = PescadorAutomatico.buscaPeixeVerde()
         print("o peixe fisgou!")
-        mouse.move(PescadorAutomatico.posicaoPeixeVerde[0],PescadorAutomatico.posicaoPeixeVerde[1], duration = 0.6)
+        mouse.move(PescadorAutomatico.posicaoPeixeVerde[0],PescadorAutomatico.posicaoPeixeVerde[1], duration = 0.1)
         mouse.click()
         #PescadorAutomatico.SelecionaPokemon()
         print("o peixe ta por ai") 
